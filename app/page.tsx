@@ -7,10 +7,12 @@ import Inside from '@/src/components/Inside'
 import Features from '@/src/components/Features'
 import Footer from '@/src/components/Footer'
 
-const Team = dynamic(() => import('@/src/components/Team'))
-const SocialProof = dynamic(() => import('@/src/components/SocialProof'))
-const ContributorsTeaser = dynamic(() => import('@/src/components/ContributorsTeaser'))
-const FAQ = dynamic(() => import('@/src/components/FAQ'))
+const Team = dynamic(() => import('@/src/components/Team'), { ssr: false })
+const SocialProof = dynamic(() => import('@/src/components/SocialProof'), { ssr: false })
+const ContributorsTeaser = dynamic(() => import('@/src/components/ContributorsTeaser'), {
+  ssr: false,
+})
+const FAQ = dynamic(() => import('@/src/components/FAQ'), { ssr: false })
 
 export default function Home() {
   return (
