@@ -56,7 +56,7 @@ function InstagramIcon() {
 }
 
 export default function ContributorCard({ contributor }: { contributor: Contributor }) {
-  const avatarUrl = `https://github.com/${contributor.githubUsername}.png`
+  const avatarUrl = `https://github.com/${contributor.githubUsername}.png?s=128`
   const hasSocials =
     contributor.linkedin ||
     contributor.github ||
@@ -72,7 +72,7 @@ export default function ContributorCard({ contributor }: { contributor: Contribu
           <AvatarFallback>{contributor.name.slice(0, 2).toUpperCase()}</AvatarFallback>
         </Avatar>
         <div className="min-w-0">
-          <Typography variant="h5" className="truncate">
+          <Typography variant="h4" className="truncate">
             {contributor.name}
           </Typography>
           <Typography variant="caption" color="secondary" className="font-mono">

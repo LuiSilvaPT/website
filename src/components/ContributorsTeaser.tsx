@@ -33,7 +33,10 @@ export default function ContributorsTeaser() {
             {preview.map((c) => (
               <div key={c.githubUsername} className="group relative">
                 <Avatar variant="secondary" className="h-14 w-14" tooltip={c.name}>
-                  <AvatarImage src={`https://github.com/${c.githubUsername}.png`} alt={c.name} />
+                  <AvatarImage
+                    src={`https://github.com/${c.githubUsername}.png?s=128`}
+                    alt={c.name}
+                  />
                   <AvatarFallback>{c.name.slice(0, 2).toUpperCase()}</AvatarFallback>
                 </Avatar>
               </div>
